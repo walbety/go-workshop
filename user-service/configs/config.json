@@ -1,0 +1,29 @@
+{
+  "appEnv": "development",
+  "serviceName": "user-service",
+  "restPort": "32001",
+  "logFormat": "compose",
+  "logLevel": "DEBUG",
+  "services": {
+    "exchange": {
+      "grpcPort": "32003",
+      "address": "localhost:32001"
+    }
+  },
+  "repository": {
+    "mongodb": {
+      "credentials": {
+        "user": "root",
+        "password": "rootpassword"
+      },
+      "port": "27017",
+      "timeoutMS": "5000",
+      "database": "user"
+    }
+  },
+  "validations": {
+    "rest": {
+      "dateFormat": "02-01-2006"
+    }
+  }
+}
